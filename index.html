@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript" src="js/function.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+<script type="text/javascript">
+eye.isVertical = 0; //if it's vertical or horizontal [0|1]
+eye.x = 150; // x offset from point of insertion on page
+eye.y = 0; // y offset from point of insertion on page
+eye.w = 150; // item's width
+eye.h = 30; // height
+eye.r = 100; // menu's radius
+eye.v = 20; // the velocity
+eye.s = 8; // (for 3D effect)
+eye.color = '#ffffff';
+eye.colorover = '#ffffff'; 
+eye.backgroundcolor = '#0099ff'; 
+eye.backgroundcolorover = '#990000'; 
+eye.bordercolor = '#000000'; 
+eye.fontsize = 12; 
+eye.fontfamily = 'Arial';
+if (document.getElementById){
+document.write('<div id="spinanchor" style="height:'+eval(eye.h+20)+'"></div>')
+eye.anchor=document.getElementById('spinanchor')
+eye.spinmenu();
+eye.x+=getposOffset(eye.anchor, "left") 
+eye.y+=getposOffset(eye.anchor, "top") 
+
+//menu_item
+eye.spinmenuitem("Sourcecodester","http://www.sourcecodester.com");
+eye.spinmenuitem("Articles","http://www.sourcecodester.com/article");
+eye.spinmenuitem("Programming","http://www.sourcecodester.com/programming");
+eye.spinmenuitem("Mobile","http://www.sourcecodester.com/mobile");
+eye.spinmenuitem("Tutorials","http://www.sourcecodester.com/tutorial");
+eye.spinmenuitem("FAQ","http://www.sourcecodester.com/faq");
+eye.spinmenuclose();
+}
+</script>
+
+</body>
